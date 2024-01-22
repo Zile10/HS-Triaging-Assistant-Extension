@@ -1,0 +1,17 @@
+{
+    "name": "Triage Assistant",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "Test",
+    "permissions": ["webNavigation", "activeTab"],
+    "background": {
+        "service_worker": "src/js/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://secure.helpscout.net/*"],
+            "js": ["src/js/content/note.js", "src/js/content/aidMenu.js", "src/js/content/init.js"],
+            "css": ["src/css/aidMenu.css"]
+        }
+    ]
+}
