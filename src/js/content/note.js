@@ -118,14 +118,16 @@ function createNote() {
 function templateSelector() {
     let body = document.querySelector('body');
     setTimeout(() => {
+        let noteBox = document.querySelector('div.redactor_redactor.redactor_editor');
+        let notBoxRec = noteBox.getBoundingClientRect();
         body.innerHTML += `
             <div
                 style="
                     position: fixed;
-                    top: 200px;
-                    left: 350px;
-                    width: 450px;
-                    height: 350px;
+                    top: ${notBoxRec.top}px;
+                    left: ${notBoxRec.left}px;
+                    width: ${notBoxRec.width}px;
+                    height: ${notBoxRec.height}px;
                     background-color: rgba(0, 0, 0, 0.5);
                     z-index: 10000;
                 "
@@ -134,7 +136,7 @@ function templateSelector() {
             </div>
         `
         console.log(document.querySelector('.tester-template-selector'))
-    }, 100)
+    }, 200)
 }
 
 function activateNoteTemplate() {
