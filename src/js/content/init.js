@@ -5,6 +5,7 @@ function checkURL() {
 
         if (url.includes('secure.helpscout.net/conversation')) {
             main()
+            // activateNoteTemplate()
         } else if(document.querySelector('div#aid-menu')) {
             document.querySelector('div#aid-menu').remove()
         }

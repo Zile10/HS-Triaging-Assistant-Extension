@@ -396,16 +396,13 @@ function searchPlaybooks(query) {
     ]
 
     let results = []
-    console.log("Search Query Length:", query.length)
     if (query.length > 0) {
         playbooks.forEach((pb) => {
             if (pb.name.toLowerCase().search(query) >= 0) {
-                console.log(pb.name.toLowerCase().search(query))
                 results.push(pb)
             }
         })
     } else {results = playbooks};
-    console.log("Results:", results)
     return results;
 }
 

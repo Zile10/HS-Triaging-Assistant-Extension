@@ -75,3 +75,75 @@ function setTicketData() {
         reply: '',
     }
 }
+
+function addTemplateNote(){
+    window.setTimeout( () => {
+        let noteBox = document.querySelector('div.redactor_redactor.redactor_editor');
+        noteBox.innerHTML = `
+        <h2><b><u>Preface</u></b>:</h2>
+        -<b>Reported Issue</b>:&nbsp;${ticketData.issue}<br>
+        -<b>Store_ID</b>:&nbsp;${ticketData.storeId}<br>
+        -<b>Workflow</b>:&nbsp;${ticketData.workflow}<br>
+        <br>
+
+        <hr>
+
+        <h2><b><u>Investigation</u></b>:</h2>
+        <h3>References:</h3>
+        -<b>Playbook</b>:&nbsp;${ticketData.playbook}<br>
+        -<b>Tickets</b>:&nbsp;<br>
+        <h3>Queries & Observations</h3>
+        -<b>Items</b>:&nbsp;<br>
+        <ol>
+            
+        </ol>
+        <br>
+
+        <hr>
+
+        <h2><b><u>Conclusion</u></b>:</h2>
+        -<b>Summary of Observations</b>:
+        -<b>Reply</b>:<br>
+        ${ticketData.reply}
+        `
+    }, 10)
+}
+
+function createNote() {
+    clearTicketData()
+    setTicketData()
+    addTemplateNote()
+}
+
+function templateSelector() {
+    let body = document.querySelector('body');
+    setTimeout(() => {
+        body.innerHTML += `
+            <div
+                style="
+                    position: fixed;
+                    top: 200px;
+                    left: 350px;
+                    width: 450px;
+                    height: 350px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    z-index: 10000;
+                "
+                class="tester-template-selector"
+            >
+            </div>
+        `
+        console.log(document.querySelector('.tester-template-selector'))
+    }, 100)
+}
+
+function activateNoteTemplate() {
+    window.setTimeout( () => {
+        let noteBtn = document.querySelector('a#navNote');
+        noteBtn.addEventListener('click', () => {
+            templateSelector()
+            // createNote()
+        })
+
+    }, 1800)
+}
