@@ -112,7 +112,7 @@ function addTemplateNote(){
 function createNote() {
     clearTicketData()
     setTicketData()
-    addTemplateNote()
+    // addTemplateNote()
 }
 
 function templateSelector() {

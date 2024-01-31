@@ -14,14 +14,22 @@ function setCustomFields() {
             let optionText = option.textContent.toLowerCase()
             if (optionText === division) {
                 // option.selected = true 
-                divisionField.value = option.value
-                divisionField.classList.toggle('unselected')
-                console.log('TRUE!!!');
-            } else {
-                // option.selected = false
+                option.selected = true
+                changeEvent = new Event('change', { bubbles: true })
+                divisionField.dispatchEvent(changeEvent)
+
             }
-            console.log('Option:', optionText, '||', 'Division:', division)
         })
-    
+
+        departmentField.querySelectorAll('option').forEach(option => {
+            let optionText = option.textContent.toLowerCase()
+            if ( ticketData.workflow.toLowerCase().includes(optionText) ) {
+                // option.selected = true 
+                option.selected = true
+                changeEvent = new Event('change', { bubbles: true })
+                departmentField.dispatchEvent(changeEvent)
+
+            }
+        })
     }, 800)
 }
