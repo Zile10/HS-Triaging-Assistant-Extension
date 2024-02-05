@@ -124,3 +124,16 @@
 h5 {
     color: white !important;
 }
+
+#note-form-popup {
+    z-index: 10000;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#note-form-popup .note-form-inner {
+    width: 450px; height: 600px;
+    margin: 50px auto;
+    background-color: #fff; border-radius: 25px;
+}
