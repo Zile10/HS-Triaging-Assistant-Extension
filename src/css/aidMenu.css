@@ -134,6 +134,6 @@ h5 {
 
 #note-form-popup .note-form-inner {
     width: 450px; height: 600px;
-    margin: 50px auto;
-    background-color: #fff; border-radius: 25px;
+    margin: 50px auto; padding: 16px;
+    background-color: #fff; box-shadow: 0 0 4px #111; border-radius: 8px;
 }

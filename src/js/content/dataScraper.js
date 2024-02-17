@@ -6,9 +6,10 @@ let ticketData = {
     playbook: '',
     reply: '',
 };
-let propertiesDiv = document.querySelector('#properties');
+let propertiesDiv;
     
-let division = propertiesDiv.querySelector('#property-label-division + span > span').textContent.toLowerCase()
+let division;
+
 
 
 function clearTicketData() {
@@ -82,5 +83,8 @@ function setTicketData() {
         playbook: '',
         reply: '',
     }
+
+    propertiesDiv = document.querySelector('#properties');
+    division = propertiesDiv.querySelector('#property-label-division + span > span').textContent.toLowerCase();
 }
 

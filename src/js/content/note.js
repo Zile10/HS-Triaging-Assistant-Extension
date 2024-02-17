@@ -7,15 +7,41 @@ function createNoteForm() {
             <h2>Custom Triage Form</h2>
             <hr>
             <form>
-                <label for="issue-type">Issue Type:</label>
-                <select>
-                    <option>Type 1</option>
-                    <option>Option 2</option>
-                    <option>Type 3</option>
-                    <option>Option 4</option>
-                    <option>Type 5</option>
-                    <option>Option 6</option>
-                </select>
+                <div className="partner">
+                    <label for="partner-select">Issue Type:</label>
+                    <select name="partner-select">
+                        <option>Type 1</option>
+                        <option>Option 2</option>
+                        <option>Type 3</option>
+                        <option>Option 4</option>
+                        <option>Type 5</option>
+                        <option>Option 6</option>
+                    </select>
+                </div>
+
+                <div className="issue-type">
+                    <label for="issue-type">Issue Type:</label>
+                    <select name="issue-type">
+                        <option>Type 1</option>
+                        <option>Option 2</option>
+                        <option>Type 3</option>
+                        <option>Option 4</option>
+                        <option>Type 5</option>
+                        <option>Option 6</option>
+                    </select>
+                </div>
+
+                <div className="issue-type">
+                    <label for="issue-type">Issue Type:</label>
+                    <select name="issue-type">
+                        <option>Type 1</option>
+                        <option>Option 2</option>
+                        <option>Type 3</option>
+                        <option>Option 4</option>
+                        <option>Type 5</option>
+                        <option>Option 6</option>
+                    </select>
+                </div>
             <form>
 
         </div>
